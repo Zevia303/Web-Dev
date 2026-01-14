@@ -1,1 +1,210 @@
-<html/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoSquare</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+        }
+        section {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        #featured {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        #featured img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+        #featured h2 {
+            text-align: center;
+            color: #333;
+        }
+        #featured p.story {
+            font-style: italic;
+            text-align: center;
+        }
+        #featured p.description {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .photo-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .photo-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .photo-card .content {
+            padding: 15px;
+        }
+        .photo-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.4em;
+        }
+        .photo-card p {
+            margin: 5px 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PhotoSquare</h1>
+        <p>PhotoSquare is a vibrant platform dedicated to photography enthusiasts, showcasing stunning images from diverse authors and curators around the world. Discover weekly featured photographers, inspiring stories, and a curated gallery of captivating visuals, complete with descriptions and locations to immerse you in the art of photography.</p>
+    </header>
+
+    <section id="featured">
+        <h2>Photographer of the Week: Jane Doe</h2>
+        <img src="https://via.placeholder.com/800x400?text=Featured+Photo" alt="Featured Photo by Jane Doe">
+        <p class="story">Jane Doe is a passionate landscape photographer based in the mountains of Colorado. Her work captures the raw beauty of nature, blending light and shadow to evoke emotion and wonder. This week's feature highlights her journey through remote trails, where she discovered hidden gems that tell stories of resilience and serenity.</p>
+        <p class="description">Description: A breathtaking sunset over misty peaks. Location: Rocky Mountains, Colorado, USA.</p>
+        
+        <form action="https://formspree.io/f/your-form-id" method="POST"> <!-- Replace with your Formspree or similar endpoint for actual email sending -->
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message to Jane Doe:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Contact Photographer</button>
+        </form>
+    </section>
+
+    <section id="gallery">
+        <h2>Explore More Photographers</h2>
+        <div class="gallery">
+            <div class="photo-card">
+                <img src="https://via.placeholder.com/300x200?text=Photo+by+John+Smith" alt="Photo by John Smith">
+                <div class="content">
+                    <h3>John Smith</h3>
+                    <p>Description: Urban street scene at dusk. Location: New York City, USA.</p>
+                    <form action="https://formspree.io/f/your-form-id" method="POST"> <!-- Replace with actual endpoint -->
+                        <label for="name1">Your Name:</label>
+                        <input type="text" id="name1" name="name" required>
+                        
+                        <label for="email1">Your Email:</label>
+                        <input type="email" id="email1" name="email" required>
+                        
+                        <label for="message1">Message to John Smith:</label>
+                        <textarea id="message1" name="message" rows="4" required></textarea>
+                        
+                        <button type="submit">Contact Photographer</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="https://via.placeholder.com/300x200?text=Photo+by+Emily+Johnson" alt="Photo by Emily Johnson">
+                <div class="content">
+                    <h3>Emily Johnson</h3>
+                    <p>Description: Serene ocean waves crashing on rocks. Location: Big Sur, California, USA.</p>
+                    <form action="https://formspree.io/f/your-form-id" method="POST"> <!-- Replace with actual endpoint -->
+                        <label for="name2">Your Name:</label>
+                        <input type="text" id="name2" name="name" required>
+                        
+                        <label for="email2">Your Email:</label>
+                        <input type="email" id="email2" name="email" required>
+                        
+                        <label for="message2">Message to Emily Johnson:</label>
+                        <textarea id="message2" name="message" rows="4" required></textarea>
+                        
+                        <button type="submit">Contact Photographer</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="https://via.placeholder.com/300x200?text=Photo+by+Alex+Lee" alt="Photo by Alex Lee">
+                <div class="content">
+                    <h3>Alex Lee</h3>
+                    <p>Description: Vibrant market bustling with colors. Location: Marrakech, Morocco.</p>
+                    <form action="https://formspree.io/f/your-form-id" method="POST"> <!-- Replace with actual endpoint -->
+                        <label for="name3">Your Name:</label>
+                        <input type="text" id="name3" name="name" required>
+                        
+                        <label for="email3">Your Email:</label>
+                        <input type="email" id="email3" name="email" required>
+                        
+                        <label for="message3">Message to Alex Lee:</label>
+                        <textarea id="message3" name="message" rows="4" required></textarea>
+                        
+                        <button type="submit">Contact Photographer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 PhotoSquare. All rights reserved.</p>
+    </footer>
+</body>
+</html>
